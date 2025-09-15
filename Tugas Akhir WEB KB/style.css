@@ -1,0 +1,476 @@
+/* ======== Importing Google Fonts ======== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,700&display=swap');
+
+/* ======= Global Style ======= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Slide 1 */
+/* ======= Navbar ======= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #2b1055, #7597de);
+  color: #ffca28;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Group logo + tulisan */
+nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* atur jarak logo & tulisan */
+}
+
+/* Logo gambar */
+nav .brand img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffca28;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Tulisan HIMTI UMT */
+nav .brand .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffca28;
+}
+
+/* Logo gambar */
+nav img {
+  width: 60px;              /* atur ukuran logo */
+  height: 60px;
+  border-radius: 50%;       /* bikin bulat */
+  object-fit: cover;        /* biar gak gepeng */
+  margin-right: 10px;
+
+  /* Tambahan efek */
+  border: 3px solid #ffca28;   /* list/border putih */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* shadow bayangan */
+  transition: 0.3s ease;
+}
+
+/* Efek hover pada logo */
+nav img:hover {
+  transform: scale(1.1);    /* membesar sedikit saat dihover */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #ffca28;
+}
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ======= Hero Section ======= */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(253, 250, 250, 0.986)), 
+              url('images/animasi.jpg') center/cover;
+  text-align: center;
+  color: white;
+}
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+  animation: fadeInDown 1s ease;
+}
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  animation: fadeInUp 1.2s ease;
+}
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ffca28;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ffc107;
+  transform: scale(1.05);
+}
+
+/* ======= Section ======= */
+section {
+  padding: 60px 40px;
+  text-align: center;
+}
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* ======= Animations ======= */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0d47a1;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.about {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.about-bubble {
+  background: linear-gradient(90deg, #ab6d93, #5483a7);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  text-align: center;
+}
+
+.about-bubble h2 {
+  font-size: 28px;
+  color: #ffca28;
+  margin-bottom: 15px;
+  box-shadow: ;
+}
+
+.about-bubble p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #2b1055, #7597de);
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffca28, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer a {
+  color: #ffd369;
+  text-decoration: none;
+}
+footer hr {
+  border: none;
+  border-top: 5px solid rgba(255,255,255,0.3);
+  margin: 15px auto;
+  width: 60%;
+}
+/* Slide 2 */
+  /* Background Gradasi Ungu dan Pink Pastel */
+  .swiper-slide.slide-himti {
+    background: linear-gradient(135deg, #9b59b6, #f7b7d7, #ffffff);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+/* Jika dipasang di navbar bersama teks, ini opsional: */
+.brand {                         /* contoh: <div class="brand"><div class="logo">...</div><div class="text">HIMTI UMT</div></div> */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;                     /* jarak logo dengan tulisan */
+}
+
+.content h1 {
+  color: #5e2a8c; /* Ungu Gelap */
+  font-size: 36px;
+  margin-bottom: 15px;
+  text-align: center; /* Biar tulisan HIMTI ke tengah */
+}
+  .content p {
+    color: #134a79; /* Warna Teks Abang */
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .info-cards .card {
+    background-color: #fFF;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-cards .card img {
+  width: 80px;
+  height: 80px;         /* HARUS sama dengan width */
+  margin-bottom: 10px; 
+  border-radius: 50%;   /* bikin bulat */
+  object-fit: cover;    /* isi gambar tidak gepeng */
+}
+
+  .info-cards .card h3 {
+    color: #9b59b6; /* Ungu */
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .info-cards .card p {
+    color: #f7b7d7; /* Pink Pastel */
+    font-size: 16px;
+  }
+
+  /* Footer */
+footer {
+  background: linear-gradient(90deg, #2b1055, #7597de);
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffca28, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer a {
+  color: #ffd369;
+  text-decoration: none;
+}
+footer hr {
+  border: none;
+  border-top: 5px solid rgba(179, 141, 141, 0.986);
+  margin: 15px auto;
+  width: 60%;
+}
+
+
+/* Slide 3 */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+/* Section Titles */
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  position: relative;
+  background: linear-gradient(90deg, #e100ff, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+}
+
+/* Materi Section */
+.materi-section {
+  padding: 60px 20px;
+}
+.materi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.materi-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.materi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+.materi-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.materi-card h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.materi-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Card Variants */
+.materi-card.purple { border-top: 6px solid #7f00ff; }
+.materi-card.pink { border-top: 6px solid #e100ff; }
+.materi-card.teal { border-top: 6px solid #00c9a7; }
+.materi-card.orange { border-top: 6px solid #ff9f1c; }
+
+/* Jadwal Section */
+.jadwal-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f0ff, #ffe6f9);
+  text-align: center;
+}
+.jadwal-box {
+  display: inline-block;
+  background: white;
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+  font-size: 22px;
+  color: #7f00ff;
+  font-weight: 600;
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from { box-shadow: 0px 0px 15px rgba(127,0,255,0.3); }
+  to { box-shadow: 0px 0px 25px rgba(225,0,255,0.6); }
+}
+
+
+/* Footer */
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 10px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.footer-logo {
+  font-size: 15px;
+  margin-bottom: 3px;
+  background: linear-gradient(90deg, #ffca28, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer a {
+  color: #ffd369;
+  text-decoration: none;
+  font-size: 10px;
+}
+footer hr {
+  border: none;
+  border-top: 1px solid rgb(255, 255, 255);
+  margin: 3px auto;
+  width: 10%;
+  font-size: 10px;
+}
+.copy {
+  font-size: 10px;
+}
+
